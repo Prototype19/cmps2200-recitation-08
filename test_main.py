@@ -10,6 +10,7 @@ def test_shortest_shortest_path():
                 'd': {},
                 'e': {('d', 0)}
             }
+
     result = shortest_shortest_path(graph, 's')
     # result has both the weight and number of edges in the shortest shortest path
     assert result['s'] == (0,0)
@@ -32,3 +33,7 @@ def test_get_path():
     graph = get_sample_graph()
     parents = bfs_path(graph, 's')
     assert get_path(parents, 'd') == 'sbc'
+
+test_shortest_shortest_path()
+test_bfs_path()
+test_get_path()
